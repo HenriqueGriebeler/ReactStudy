@@ -5,7 +5,6 @@ import { useEffect } from 'react'
 
 function App() {
 
-// https://excuser-three.vercel.app/v1/excuse/party/
 // https://excuser-three.vercel.app/v1/excuse/family/
 // https://excuser-three.vercel.app/v1/excuse/office/
 
@@ -20,15 +19,27 @@ useEffect(() => {
   fetchCatFact()
 }, [])
 
-
+const [exc, setExcuse] = useState(null)
 const [predictedAge, setPredictedAge] = useState(null)
 const [name, setName] = useState("")
 const fetchData = () => {
   Axios.get(`https://api.agify.io/?name=${name}`).then((res) => {
-    console.log(res.data)
     setPredictedAge(res.data)
+    console.log(res.data)
   })
 }
+
+const excuser = (selected) => {
+
+  console.log(selected)
+  Axios.get(`https://excuser-three.vercel.app/v1/excuse/${selected}`).then((res) => {
+    setExcuse(res.data[0])
+    console.log(res.data)
+})
+}
+
+
+
 
   return (
     <div className="App">
@@ -44,6 +55,19 @@ const fetchData = () => {
           <h1> Predicted Age: {predictedAge?.age} </h1>
           <h1> Count: {predictedAge?.count} </h1>
         </div>
+
+    <div>
+      <br></br>
+      <h1>Excuse generator:</h1>
+      <button id='btn' onClick={() => excuser('party')}>Party</button>
+      <button id='btn' onClick={() => excuser('family')}>Family</button>
+      <button id='btn' onClick={() => excuser('office')}>Office</button>
+
+      <br></br>
+
+      <p> {exc?.excuse} </p>
+    </div>
+
     </div>
   );
 }
