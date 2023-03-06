@@ -1,8 +1,10 @@
-export {Profile};
-const Profile = () => {
+import { ChangeProfile } from "./changeProfile.js"
+export const Profile = (props) => {
     return <div>
         <p>eita bixo página do perfil</p>
 
-        <p>Nome do perfik é??????? : </p>
+        <div>
+            Nome do perfik é??????? : {props.username} 
+        <ChangeProfile setUsername={props.setUsername}/></div>
     </div>
 }
