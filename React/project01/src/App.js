@@ -1,4 +1,8 @@
 import './App.css';
+import htmlimg from './images/html.png'
+import cssimg from './images/css3.png'
+import JSimg from './images/javaScript.png'
+import reactimg from './images/reactjs.png'
 
 function App() {
 <style>
@@ -8,7 +12,7 @@ function App() {
 
     <div className="App">
      <Home />
-
+    
 
 
     </div>
@@ -22,25 +26,33 @@ const Home = () => {
     <header>
     <section>
       <h1>Henrique de Araújo Griebeler</h1>
-      <p id='sectionP1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <p id='sectionP1'>My start with web development not long ago, I started html and css in the first half of 2022, learning by myself as autodidact, watching videos and creating websites to practice.</p>
+      <p id='sectionP1'>The second half of 2022 was dedicated to JavaScript and React.</p>   
+      {/* JA TEM UM BACKGROUND, PRECISO COLOCAR AGORA coisas práticas. Posso estar aprimorando o site leitor de páginas e fazer funcionar como algo para demonstrar */}
     </section>
     </header>
 
       <div> {/* AQUI VAI EXPLICANDO COISAS DO CURRICULO */}  
       
-      <br></br><br></br><br></br>
-      <br></br> <br></br> <br></br> <br></br> <br></br>  </div>
+       </div>
 
-        <div>
+        <div> {/* INICIO DAS CAIXAS */}
         <main>
+          <h1 style={{paddingLeft: '25px', paddingTop: '10px'}}>known technologies</h1>
           <div id='boxFrame'>
-            <div class='box'><img src='../images/html.png'></img>HTML 5</div>
-            <div class='box'><img src='../images/css.png'></img>CSS 3</div>
-            <div class='box'><img src='../images/javaScript.png'></img>JavaScript</div>
-            <div class='box'><img src='../images/reactjs.png'></img>React.JS</div>
-            </div>
-        </main>
-        </div>
+            <div class='box'><img src={htmlimg} class='boxImage'/> HTML 5</div>
+            <div class='box'><img src={cssimg} class='boxImage'/>CSS 3</div>
+            <div class='box'><img src={JSimg} class='boxImage'/>JavaScript</div>
+            <div class='box'><img src={reactimg} class='boxImage'/>React.JS</div>
+          </div>
+      </main>
+      </div>
+      
+          <div>
+          <footer>
+
+          </footer>
+          </div>
 
   </div>
 }
