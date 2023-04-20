@@ -32,18 +32,24 @@ const Home = () => {
     </section>
     </header>
 
-      <div> {/* AQUI VAI EXPLICANDO COISAS DO CURRICULO */}  
+      <div> {/* AQUI VAI EXPLICANDO COISAS DO CURRICULO */}
       
        </div>
 
         <div> {/* INICIO DAS CAIXAS */}
+        
         <main>
-          <h1 style={{paddingLeft: '25px', paddingTop: '10px'}}>known technologies</h1>
+    <h1 style={{paddingLeft: '25px', paddingTop: '10px'}}>known technologies</h1>
+
           <div id='boxFrame'>
+
+            <div id='boxFlex'>
+
             <div class='box'><img src={htmlimg} class='boxImage'/> HTML 5</div>
             <div class='box'><img src={cssimg} class='boxImage'/>CSS 3</div>
             <div class='box'><img src={JSimg} class='boxImage'/>JavaScript</div>
             <div class='box'><img src={reactimg} class='boxImage'/>React.JS</div>
+            </div>
           </div>
       </main>
       </div>
